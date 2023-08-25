@@ -11,9 +11,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-/**
- * Hello world!
- */
+
 public class Main {
     public static void main(String[] args) {
 
@@ -35,7 +33,6 @@ public class Main {
         }.getType();
         Map<String, List<Ticket>> myMap = gson.fromJson(res, type);
 
-//        Collection<Map<Integer, Station>> values1 =
         List<Ticket> collect = new ArrayList<>();
         try {
             collect = myMap.values().stream().flatMap(r -> r.stream()).collect(Collectors.toList());
