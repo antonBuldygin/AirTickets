@@ -1,22 +1,19 @@
 package org.example;
 
 
-
-
 public class Ticket {
 
     String origin;
     String origin_name;
     String destination;
     String destination_name;
-String departure_date;
+    String departure_date;
     String departure_time;
     String arrival_date;
     String arrival_time;
     String carrier;
     Integer stops;
     Integer price;
-
 
 
     public String getOrigin() {
@@ -107,7 +104,9 @@ String departure_date;
         this.price = price;
     }
 
-    public Ticket(String origin, String origin_name, String destination, String destination_name, String departure_date, String departure_time, String arrival_date, String arrival_time, String carrier, Integer stops, Integer price) {
+    public Ticket(String origin, String origin_name, String destination, String destination_name, String departure_date,
+                  String departure_time, String arrival_date, String arrival_time,
+                  String carrier, Integer stops, Integer price) {
         this.origin = origin;
         this.origin_name = origin_name;
         this.destination = destination;
@@ -125,16 +124,16 @@ String departure_date;
     public String toString() {
         return
                 "origin='" + origin + '\'' +
-                ", origin_name='" + origin_name + '\'' +
-                ", destination='" + destination + '\'' +
-                ", destination_name='" + destination_name + '\'' +
-                ", departure_date='" + departure_date + '\'' +
-                ", departure_time='" + departure_time + '\'' +
-                ", arrival_date='" + arrival_date + '\'' +
-                ", arrival_time='" + arrival_time + '\'' +
-                ", carrier='" + carrier + '\'' +
-                ", stops=" + stops +
-                ", price=" + price +
-                " ";
+                        ", origin_name='" + origin_name + '\'' +
+                        ", destination='" + destination + '\'' +
+                        ", destination_name='" + destination_name + '\'' +
+                        ", departure_date='" + departure_date + '\'' +
+                        ", departure_time='" + departure_time + '\'' +
+                        ", arrival_date='" + arrival_date + '\'' +
+                        ", arrival_time='" + arrival_time + '\'' +
+                        ", carrier='" + carrier + '\'' +
+                        ", stops=" + stops +
+                        ", price=" + price +
+                        " ";
     }
 }
