@@ -85,15 +85,17 @@ public class Main {
 
             Long min = Collections.min(entry.getValue());
 //            System.out.println(min);
-            long hours = TimeUnit.MILLISECONDS.toHours(min)%24;
+            long hours = TimeUnit.MILLISECONDS.toHours(min) % 24;
             String hour = "";
-            if(hours<10){hour="0"+hours;}
-            else hour=""+hours;
+            if (hours < 10) {
+                hour = "0" + hours;
+            } else hour = "" + hours;
 
-            long minutes = TimeUnit.MILLISECONDS.toMinutes(min)%60;
+            long minutes = TimeUnit.MILLISECONDS.toMinutes(min) % 60;
             String minut = "";
-            if(minutes<10){minut="0"+minutes;}
-            else minut=""+minutes;
+            if (minutes < 10) {
+                minut = "0" + minutes;
+            } else minut = "" + minutes;
 
             System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
                             " авиаперевозчика %s - %s:%s  часов : минут  \n", entry.getKey(),
