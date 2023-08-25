@@ -86,9 +86,21 @@ public class Main {
 //        System.out.println(airline.toString());
         for (Map.Entry<String, List<Long>> entry : airline.entrySet()) {
 
+            Long min = Collections.min(entry.getValue());
+//            System.out.println(min);
+            long hours = TimeUnit.MILLISECONDS.toHours(min)%24;
+//            System.out.println(hours);
+            long minutes = TimeUnit.MILLISECONDS.toMinutes(min)%60;
+//            System.out.println(minutes);
+            long seconds= TimeUnit.MILLISECONDS.toSeconds(min)%60;
+//            System.out.println(seconds);
+//            System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
+//                            " авиаперевозчика %s, : %.2f время в часах \n", entry.getKey(),
+//                    TimeUnit.MINUTES.convert(Collections.min(entry.getValue()), TimeUnit.MILLISECONDS) / 60.0);
+
             System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
-                            " авиаперевозчика %s, : %.2f время в часах \n", entry.getKey(),
-                    TimeUnit.MINUTES.convert(Collections.min(entry.getValue()), TimeUnit.MILLISECONDS) / 60.0);
+                            " авиаперевозчика %s - %d : %d :%d часов минут секунд \n", entry.getKey(),
+                    hours, minutes, seconds);
 
         }
 
