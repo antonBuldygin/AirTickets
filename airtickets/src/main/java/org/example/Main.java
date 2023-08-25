@@ -86,18 +86,18 @@ public class Main {
             Long min = Collections.min(entry.getValue());
 //            System.out.println(min);
             long hours = TimeUnit.MILLISECONDS.toHours(min)%24;
-//            System.out.println(hours);
+            String hour = "";
+            if(hours<10){hour="0"+hours;}
+            else hour=""+hours;
+
             long minutes = TimeUnit.MILLISECONDS.toMinutes(min)%60;
-//            System.out.println(minutes);
-            long seconds= TimeUnit.MILLISECONDS.toSeconds(min)%60;
-//            System.out.println(seconds);
-//            System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
-//                            " авиаперевозчика %s, : %.2f время в часах \n", entry.getKey(),
-//                    TimeUnit.MINUTES.convert(Collections.min(entry.getValue()), TimeUnit.MILLISECONDS) / 60.0);
+            String minut = "";
+            if(minutes<10){minut="0"+minutes;}
+            else minut=""+minutes;
 
             System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
-                            " авиаперевозчика %s - %d : %d :%d часов минут секунд \n", entry.getKey(),
-                    hours, minutes, seconds);
+                            " авиаперевозчика %s - %s:%s  часов : минут  \n", entry.getKey(),
+                    hour, minut);
 
         }
 
