@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          repository: 0
           ref: 3eb718710f20d7df6874acdc41e189a2ae4182f5
       - name: Greetings
         run: echo "$(<greeting.txt)"
