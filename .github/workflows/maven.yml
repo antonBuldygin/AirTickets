@@ -12,4 +12,4 @@ jobs:
             "The runner of the workflow is $RUNNER_OS"
       - name: Step with a secret
         run:
-           echo "This is a secret value:${{ secrets.SECRET_VALUE }}"
+           echo "This is a secret value:${{ secrets.ANTONSECRET }}"
