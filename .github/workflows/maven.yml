@@ -7,6 +7,9 @@ jobs:
       - name: Greetings
         run: 
           echo "The job ID is $GITHUB_JOB"   
-          "The name of the event triggered by the workflow is $GITHUB_EVENT_NAME"  
-           "The name of the workflow is $GITHUB_WORKFLOW" 
-          "The runner of the workflow is $RUNNER_OS"
+            "The name of the event triggered by the workflow is $GITHUB_EVENT_NAME"  
+            "The name of the workflow is $GITHUB_WORKFLOW" 
+            "The runner of the workflow is $RUNNER_OS"
+      - name: Step with a secret
+        run:
+           echo "This is a secret value:${{ secrets.SECRET_VALUE }}"
