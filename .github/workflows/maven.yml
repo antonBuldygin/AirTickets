@@ -4,9 +4,9 @@ jobs:
   external-workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: abystoma/external-workflow
-          ref: 3eb718710f20d7df6874acdc41e189a2ae4182f5
       - name: Greetings
-        run: echo "$(<greeting.txt)"
+        run: 
+          echo "The job ID is $GITHUB_JOB"   
+          echo "The name of the event triggered by the workflow is $GITHUB_EVENT_NAME"  
+          echo "The name of the workflow is $GITHUB_WORKFLOW" 
+          echo "The runner of the workflow is $RUNNER_OS"
