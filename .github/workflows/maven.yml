@@ -4,11 +4,12 @@ jobs:
   external-workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Encrypted
-        with: 
-          secret: ${{ secrets.ANTONSECRET }}
-        env: # Or we can configure the secret as an environment variable
-          secret: ${{ secrets.ANTONSECRET }}
+      # - name: Encrypted
+      #   run: 
+      #   with: 
+      #     secret: ${{ secrets.ANTONSECRET }}
+      #   env: # Or we can configure the secret as an environment variable
+      #     secret: ${{ secrets.ANTONSECRET }}
       - name: Greetings
         run: 
           echo "The job ID is $GITHUB_JOB"   
