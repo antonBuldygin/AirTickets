@@ -97,7 +97,7 @@ public class Main {
                 minut = "0" + minutes;
             } else minut = "" + minutes;
 
-            System.out.format("Минимальное время полета между городами Владивосток и Тель-Авив для " +
+            System.out.format("Минимальное Время полета между городами Владивосток и Тель-Авив для " +
                             " авиаперевозчика %s - %s:%s  часов : минут  \n", entry.getKey(),
                     hour, minut);
 
