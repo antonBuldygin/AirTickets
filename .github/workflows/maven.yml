@@ -10,7 +10,7 @@ jobs:
             "The name of the event triggered by the workflow is $GITHUB_EVENT_NAME"  
             "The name of the workflow is $GITHUB_WORKFLOW" 
             "The runner of the workflow is $RUNNER_OS"
-      - name: Encrypted secret for repository
+      - name: Encrypted
         with: 
               secret: ${{ secrets.ANTONSECRET }}
       - name: Step with a secret
